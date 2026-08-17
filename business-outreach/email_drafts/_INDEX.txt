@@ -1,0 +1,464 @@
+EMAIL CAMPAIGN INDEX — $200 Website Outreach
+===========================================
+Generated: 2026-08-17
+Total drafts: 91
+From: Prem <you@example.com>
+
+IMPORTANT: Review each draft before sending. Edit YOUR_NAME / YOUR_EMAIL / PORTFOLIO at the top of generate_emails.js and re-run to update.
+
+--- All drafts ---
+
+[01_4_Cats_Arts_Studio.txt]
+  To:      4 Cats Arts Studio <oakville@4cats.com>
+  Subject: A better website for 4 Cats Arts Studio — $200, no monthly fees
+  Cat:     shop:art
+
+[02_Alton_Dental.txt]
+  To:      Alton Dental <info@altondental.corn>
+  Subject: New patients start online — Alton Dental website ($200)
+  Cat:     amenity:dentist
+
+[03_Anytime_Anywhere_Therapy.txt]
+  To:      Anytime Anywhere Therapy <contact@anytimeanywheretherapy.com>
+  Subject: A better website for Anytime Anywhere Therapy — $200, no monthly fees
+  Cat:     other
+
+[04_AU_79.txt]
+  To:      AU 79 <info@au79coffee.ca>
+  Subject: A proper website for AU 79 — $200 flat
+  Cat:     amenity:cafe
+
+[05_Audi_Oakville.txt]
+  To:      Audi Oakville <info@audioakville.com>
+  Subject: A better website for Audi Oakville — $200, no monthly fees
+  Cat:     shop:car
+
+[06_Best_Brains.txt]
+  To:      Best Brains <oakvillenorth@bestbrains.com>
+  Subject: A better website for Best Brains — $200, no monthly fees
+  Cat:     amenity:prep_school
+
+[07_BioPed_Footcare.txt]
+  To:      BioPed Footcare <oakville@bioped.com>
+  Subject: A better website for BioPed Footcare — $200, no monthly fees
+  Cat:     other
+
+[08_Biryani_Master.txt]
+  To:      Biryani Master <biryanimastermississauga@gmail.com>
+  Subject: A proper website for Biryani Master — $200 flat
+  Cat:     amenity:fast_food
+
+[09_Blossom_Cafe.txt]
+  To:      Blossom Cafe <blossomcafe@chudleighs.com>
+  Subject: A proper website for Blossom Cafe — $200 flat
+  Cat:     amenity:cafe
+
+[10_Bluebird_Self_Storage.txt]
+  To:      Bluebird Self Storage <appleby@bluebirdstorage.ca>
+  Subject: A better website for Bluebird Self Storage — $200, no monthly fees
+  Cat:     shop:storage_rental
+
+[11_Brant_Cycle.txt]
+  To:      Brant Cycle <info@brantcycle.ca>
+  Subject: A better website for Brant Cycle — $200, no monthly fees
+  Cat:     shop:bicycle
+
+[12_Brant_Lakeshore_Pharmacy.txt]
+  To:      Brant Lakeshore Pharmacy <brant3333@gmail.com>
+  Subject: New patients start online — Brant Lakeshore Pharmacy website ($200)
+  Cat:     amenity:pharmacy
+
+[13_Brittany_Glen_Animal_Hospital.txt]
+  To:      Brittany Glen Animal Hospital <info@brittanyanimalhospital.com>
+  Subject: A better website for Brittany Glen Animal Hospital — $200, no monthly fees
+  Cat:     amenity:veterinary
+
+[14_Burlington_Eyecare.txt]
+  To:      Burlington Eyecare <icare@burlingtoneye.ca>
+  Subject: A better website for Burlington Eyecare — $200, no monthly fees
+  Cat:     other
+
+[15_Burlington_Trampoline_and_Tumbling.txt]
+  To:      Burlington Trampoline and Tumbling <info@burlingtontnt.com>
+  Subject: A better website for Burlington Trampoline and Tumbling — $200, no monthly fees
+  Cat:     other
+
+[16_CASE_Psychology.txt]
+  To:      CASE Psychology <info@casepsychology.com>
+  Subject: A better website for CASE Psychology — $200, no monthly fees
+  Cat:     other
+
+[17_Chika_Bean_Cafe.txt]
+  To:      Chika Bean Cafe <chikabeancafe@gmail.com>
+  Subject: A proper website for Chika Bean Cafe — $200 flat
+  Cat:     amenity:cafe
+
+[18_Chudleighs_Farm.txt]
+  To:      Chudleigh's Farm <customercare@chudleighs.farm>
+  Subject: A better website for Chudleigh's Farm — $200, no monthly fees
+  Cat:     other
+
+[19_Clearview_Dental.txt]
+  To:      Clearview Dental <dental@clearviewmilton.ca>
+  Subject: New patients start online — Clearview Dental website ($200)
+  Cat:     amenity:dentist
+
+[20_CW_Therapy.txt]
+  To:      CW Therapy <info@cwtherapy.ca>
+  Subject: A better website for CW Therapy — $200, no monthly fees
+  Cat:     other
+
+[21_Dentistry_In_Oak_Park.txt]
+  To:      Dentistry In Oak Park <info@drplewik.com>
+  Subject: New patients start online — Dentistry In Oak Park website ($200)
+  Cat:     amenity:dentist
+
+[22_Desi_Road.txt]
+  To:      Desi Road <info@desiroad.ca>
+  Subject: A proper website for Desi Road — $200 flat
+  Cat:     amenity:restaurant
+
+[23_Desired_Smiles_Dental.txt]
+  To:      Desired Smiles Dental <info@desiredsmiles.com>
+  Subject: New patients start online — Desired Smiles Dental website ($200)
+  Cat:     amenity:dentist
+
+[24_Dr_Ngi_Optometrist.txt]
+  To:      Dr Ngi Optometrist <DrNgiOffice@Gmail.com>
+  Subject: New patients start online — Dr Ngi Optometrist website ($200)
+  Cat:     amenity:doctors
+
+[25_Dr_Utaca_Chen.txt]
+  To:      Dr. Utaca Chen <melissa@tacdental.com>
+  Subject: New patients start online — Dr. Utaca Chen website ($200)
+  Cat:     amenity:dentist
+
+[26_Edo_Japan.txt]
+  To:      Edo Japan <edojapan.oakville@gmail.com>
+  Subject: A proper website for Edo Japan — $200 flat
+  Cat:     amenity:fast_food
+
+[27_Exterminator_Oakville.txt]
+  To:      Exterminator Oakville <inquiries@exterminatoroakville.ca>
+  Subject: A better website for Exterminator Oakville — $200, no monthly fees
+  Cat:     office:Pest_Control,_Home_Improvement
+
+[28_Familia_Fine_Foods.txt]
+  To:      Familia Fine Foods <info@familiafinefoods.com>
+  Subject: A proper website for Familia Fine Foods — $200 flat
+  Cat:     amenity:restaurant
+
+[29_Food_For_Life.txt]
+  To:      Food For Life <mailto:info@foodforlife.ca>
+  Subject: A proper website for Food For Life — $200 flat
+  Cat:     shop:food
+
+[30_For_Your_Convenience_-_Bitcoin_Well_ATM.txt]
+  To:      For Your Convenience - Bitcoin Well ATM <hello@bitcoinwell.com>
+  Subject: More atm jobs from Google — For Your Convenience - Bitcoin Well ATM ($200 website)
+  Cat:     amenity:atm
+
+[31_Georgetown_Bread_Basket.txt]
+  To:      Georgetown Bread Basket <info@georgetownbreadbasket.ca>
+  Subject: A better website for Georgetown Bread Basket — $200, no monthly fees
+  Cat:     amenity:social_facility
+
+[32_Goemans_Appliances_Clearance_Centre.txt]
+  To:      Goemans Appliances Clearance Centre <sales@goemans.com>
+  Subject: More appliance jobs from Google — Goemans Appliances Clearance Centre ($200 website)
+  Cat:     shop:appliance
+
+[33_Good_Health_Mart.txt]
+  To:      Good Health Mart <nicole@goodhealthmart.com>
+  Subject: A proper website for Good Health Mart — $200 flat
+  Cat:     shop:health_food
+
+[34_Haber_Lawyers.txt]
+  To:      Haber Lawyers <info@haberlawyers.com>
+  Subject: A better website for Haber Lawyers — $200, no monthly fees
+  Cat:     office:lawyer
+
+[35_Hellamaid_Cleaning_Services_Burlington.txt]
+  To:      Hellamaid Cleaning Services Burlington <weclean@hellamaid.com>
+  Subject: More cleaning jobs from Google — Hellamaid Cleaning Services Burlington ($200 website)
+  Cat:     craft:cleaning
+
+[36_Her_Studios_Inc.txt]
+  To:      Her Studios Inc <hello@herstudiosinc.com>
+  Subject: A better website for Her Studios Inc — $200, no monthly fees
+  Cat:     shop:hairdresser
+
+[37_Heritage_Fish_Chips.txt]
+  To:      Heritage Fish & Chips <heritagefishnchips@yahoo.ca>
+  Subject: A proper website for Heritage Fish & Chips — $200 flat
+  Cat:     amenity:restaurant
+
+[38_Heritage_Way_Medical_Spa.txt]
+  To:      Heritage Way Medical Spa <laser@hwmedicalspa.com>
+  Subject: A better website for Heritage Way Medical Spa — $200, no monthly fees
+  Cat:     shop:beauty
+
+[39_Honey_West.txt]
+  To:      Honey West <info@honeywest.ca>
+  Subject: A proper website for Honey West — $200 flat
+  Cat:     amenity:restaurant
+
+[40_Imam_Bukhari_Centre.txt]
+  To:      Imam Bukhari Centre <info@ahlehadithcanada.org>
+  Subject: A better website for Imam Bukhari Centre — $200, no monthly fees
+  Cat:     amenity:place_of_worship
+
+[41_Jacuzzi_Burlington.txt]
+  To:      Jacuzzi Burlington <sales@jacuzziontario.com>
+  Subject: A better website for Jacuzzi Burlington — $200, no monthly fees
+  Cat:     shop:swimming_pool
+
+[42_John_The_Plumber.txt]
+  To:      John The Plumber <John@johntheplumber.ca>
+  Subject: More plumber jobs from Google — John The Plumber ($200 website)
+  Cat:     craft:plumber
+
+[43_John_The_Plumber.txt]
+  To:      John The Plumber <office@johntheplumber.ca>
+  Subject: More plumber jobs from Google — John The Plumber ($200 website)
+  Cat:     craft:plumber
+
+[44_Kawartha_Dairy.txt]
+  To:      Kawartha Dairy <burlington@kawarthadairy.com>
+  Subject: A better website for Kawartha Dairy — $200, no monthly fees
+  Cat:     shop:dairy
+
+[45_Kumon_Math_Reading_Centre.txt]
+  To:      Kumon Math & Reading Centre <oakvillejoshuacreek_on@ikumon.com>
+  Subject: A better website for Kumon Math & Reading Centre — $200, no monthly fees
+  Cat:     amenity:prep_school
+
+[46_La_Creme_de_la_Creme_Creamery.txt]
+  To:      La Creme de la Creme Creamery <info@lacremedelacremecreamery.com>
+  Subject: A better website for La Creme de la Creme Creamery — $200, no monthly fees
+  Cat:     amenity:ice_cream
+
+[47_La_Viva_Hair_Studio.txt]
+  To:      La Viva Hair Studio <laviva.hairstudio@outlook.com>
+  Subject: A better website for La Viva Hair Studio — $200, no monthly fees
+  Cat:     shop:hairdresser
+
+[48_Lettuce_Love_Caf.txt]
+  To:      Lettuce Love Café <ieat@lettucelovecafe.com>
+  Subject: A proper website for Lettuce Love Café — $200 flat
+  Cat:     amenity:restaurant
+
+[49_Little_Bloomers_Childcare_Centre.txt]
+  To:      Little Bloomers Childcare Centre <littlebloomerscc@gmail.com>
+  Subject: A better website for Little Bloomers Childcare Centre — $200, no monthly fees
+  Cat:     amenity:childcare
+
+[50_Little_Free_Library.txt]
+  To:      Little Free Library <littlefreelibrary@rtms.ca>
+  Subject: A proper website for Little Free Library — $200 flat
+  Cat:     amenity:public_bookcase
+
+[51_MM_Food_Market.txt]
+  To:      M&M Food Market <store028@mmfoodmarket.com>
+  Subject: A proper website for M&M Food Market — $200 flat
+  Cat:     shop:frozen_food
+
+[52_Maple_Hill_Tree_Services.txt]
+  To:      Maple Hill Tree Services <contactus@maplehilltree.com>
+  Subject: A better website for Maple Hill Tree Services — $200, no monthly fees
+  Cat:     craft:gardener
+
+[53_Mapleview_Mall_-_Bitcoin_Well_ATM.txt]
+  To:      Mapleview Mall - Bitcoin Well ATM <hello@bitcoinwell.com>
+  Subject: More atm jobs from Google — Mapleview Mall - Bitcoin Well ATM ($200 website)
+  Cat:     amenity:atm
+
+[54_Massage_Addict.txt]
+  To:      Massage Addict <oakville@massageaddict.ca>
+  Subject: New patients start online — Massage Addict website ($200)
+  Cat:     shop:massage
+
+[55_Mathnasium.txt]
+  To:      Mathnasium <oakvillenorth@mathnasium.ca>
+  Subject: A better website for Mathnasium — $200, no monthly fees
+  Cat:     amenity:prep_school
+
+[56_Millenium_Gardens.txt]
+  To:      Millenium Gardens <info@millenniumgardens.ca>
+  Subject: A better website for Millenium Gardens — $200, no monthly fees
+  Cat:     amenity:events_venue
+
+[57_MK5.txt]
+  To:      MK5 <hello@mk5.ai>
+  Subject: A better website for MK5 — $200, no monthly fees
+  Cat:     office:advertising_agency
+
+[58_Molly_Cake.txt]
+  To:      Molly Cake <info@mollycake.ca>
+  Subject: A proper website for Molly Cake — $200 flat
+  Cat:     shop:bakery
+
+[59_Nannus_Pastizzi.txt]
+  To:      Nannu's Pastizzi <nannuspastizzi@yahoo.ca>
+  Subject: A proper website for Nannu's Pastizzi — $200 flat
+  Cat:     shop:bakery
+
+[60_Nickel_Brook.txt]
+  To:      Nickel Brook <retail@nickelbrook.com>
+  Subject: A better website for Nickel Brook — $200, no monthly fees
+  Cat:     craft:brewery
+
+[61_Nostalgia_Games_Cafe.txt]
+  To:      Nostalgia Games Cafe <info@nostalgiagamescafe.com>
+  Subject: A proper website for Nostalgia Games Cafe — $200 flat
+  Cat:     amenity:cafe
+
+[62_Oak_City_Pharmacy.txt]
+  To:      Oak City Pharmacy <info@oakcitypharmacy.com>
+  Subject: New patients start online — Oak City Pharmacy website ($200)
+  Cat:     amenity:pharmacy
+
+[63_Oakwood_Health_Network.txt]
+  To:      Oakwood Health Network <info@oakwoodhealth.com>
+  Subject: A better website for Oakwood Health Network — $200, no monthly fees
+  Cat:     other
+
+[64_Ocean_Dental_Care.txt]
+  To:      Ocean Dental Care <info@oceandentalcare.ca>
+  Subject: New patients start online — Ocean Dental Care website ($200)
+  Cat:     amenity:dentist
+
+[65_Pegasus_Appliance_Repair.txt]
+  To:      Pegasus Appliance Repair <info@pegasusappliancerepair.ca>
+  Subject: More appliance jobs from Google — Pegasus Appliance Repair ($200 website)
+  Cat:     shop:appliance
+
+[66_Piper_Arms_Pub.txt]
+  To:      Piper Arms Pub <burlington@piperarmspub.com>
+  Subject: A proper website for Piper Arms Pub — $200 flat
+  Cat:     amenity:pub
+
+[67_Promotional_Source.txt]
+  To:      Promotional Source <info@promotionalsource.ca>
+  Subject: A better website for Promotional Source — $200, no monthly fees
+  Cat:     shop:gift
+
+[68_RAVEN5.txt]
+  To:      RAVEN5 <sales@raven5.com>
+  Subject: A better website for RAVEN5 — $200, no monthly fees
+  Cat:     office:advertising_agency
+
+[69_Rynas_Nails.txt]
+  To:      Ryna's Nails <info@rynasnails.com>
+  Subject: A better website for Ryna's Nails — $200, no monthly fees
+  Cat:     shop:beauty
+
+[70_Shah_Halal_Meat_Shop.txt]
+  To:      Shah Halal Meat Shop <shahalalmeat@hotmail.com>
+  Subject: A better website for Shah Halal Meat Shop — $200, no monthly fees
+  Cat:     shop:butcher
+
+[71_Shawarma_Alley.txt]
+  To:      Shawarma Alley <shawarmaally@gmail.com>
+  Subject: A proper website for Shawarma Alley — $200 flat
+  Cat:     amenity:fast_food
+
+[72_Son_of_a_Peach_Pizzeria.txt]
+  To:      Son of a Peach Pizzeria <hey@heypeachy.com>
+  Subject: A proper website for Son of a Peach Pizzeria — $200 flat
+  Cat:     amenity:restaurant
+
+[73_South_Oak_Dental.txt]
+  To:      South Oak Dental <reception@southoakdental.com>
+  Subject: New patients start online — South Oak Dental website ($200)
+  Cat:     amenity:dentist
+
+[74_SouthsideMain.txt]
+  To:      Southside@Main <office@southsidemilton.org>
+  Subject: A better website for Southside@Main — $200, no monthly fees
+  Cat:     amenity:place_of_worship
+
+[75_Spiritleaf.txt]
+  To:      Spiritleaf <meadowvale@spiritleaf.ca>
+  Subject: A better website for Spiritleaf — $200, no monthly fees
+  Cat:     shop:cannabis
+
+[76_St_Georges_Anglican_Church.txt]
+  To:      St. George's Anglican Church <office@stgeorgesgeorgetown.com>
+  Subject: A better website for St. George's Anglican Church — $200, no monthly fees
+  Cat:     amenity:place_of_worship
+
+[77_Still_Dynamics.txt]
+  To:      Still Dynamics <info@stilldynamics.ca>
+  Subject: A better website for Still Dynamics — $200, no monthly fees
+  Cat:     other
+
+[78_Studio89.txt]
+  To:      Studio.89 <beawesome@studio89.org>
+  Subject: A proper website for Studio.89 — $200 flat
+  Cat:     amenity:cafe
+
+[79_SunnyView_Dental.txt]
+  To:      SunnyView Dental <georgetown@sunnyviewdental.ca>
+  Subject: New patients start online — SunnyView Dental website ($200)
+  Cat:     amenity:dentist
+
+[80_Symposium_Cafe_Restaurant_Georgetown.txt]
+  To:      Symposium Cafe Restaurant Georgetown <symposium.georgetown@symposiumcafe.com>
+  Subject: A proper website for Symposium Cafe Restaurant Georgetown — $200 flat
+  Cat:     amenity:restaurant
+
+[81_Symposium_Cafe_Restaurant_Milton.txt]
+  To:      Symposium Cafe Restaurant Milton <symposium.milton@symposiumcafe.com>
+  Subject: A proper website for Symposium Cafe Restaurant Milton — $200 flat
+  Cat:     amenity:restaurant
+
+[82_Symposium_Cafe_Restaurant_Oakville.txt]
+  To:      Symposium Cafe Restaurant Oakville <symposium.oakville@symposiumcafe.com>
+  Subject: A proper website for Symposium Cafe Restaurant Oakville — $200 flat
+  Cat:     amenity:restaurant
+
+[83_Tegan_Monaco_Photography.txt]
+  To:      Tegan Monaco Photography <info@teganmonacophotography.com>
+  Subject: A better website for Tegan Monaco Photography — $200, no monthly fees
+  Cat:     craft:photographer
+
+[84_The_Rad_Brothers_Sports_Bar_Tap_House.txt]
+  To:      The Rad Brothers Sports Bar & Tap House <theradbrothers@gmail.com>
+  Subject: A proper website for The Rad Brothers Sports Bar & Tap House — $200 flat
+  Cat:     amenity:pub
+
+[85_The_Works.txt]
+  To:      The Works <milton@worksburger.com>
+  Subject: A proper website for The Works — $200 flat
+  Cat:     amenity:restaurant
+
+[86_Thera_Float_Massage.txt]
+  To:      Thera Float + Massage <info@therafloatmassage.com>
+  Subject: New patients start online — Thera Float + Massage website ($200)
+  Cat:     shop:massage
+
+[87_Thrive_Massage_Therapy_Wellness.txt]
+  To:      Thrive Massage Therapy & Wellness <connect@thrivemassagewellness.com>
+  Subject: New patients start online — Thrive Massage Therapy & Wellness website ($200)
+  Cat:     shop:massage
+
+[88_Toronto_Premium_Outlets_-_Bitcoin_Well_A.txt]
+  To:      Toronto Premium Outlets - Bitcoin Well ATM <hello@bitcoinwell.com>
+  Subject: More atm jobs from Google — Toronto Premium Outlets - Bitcoin Well ATM ($200 website)
+  Cat:     amenity:atm
+
+[89_Trafalgar_Ridge_Dental.txt]
+  To:      Trafalgar Ridge Dental <info@dentistryinoakville.ca>
+  Subject: New patients start online — Trafalgar Ridge Dental website ($200)
+  Cat:     amenity:dentist
+
+[90_Wastewise_Charity_Thrift_Store.txt]
+  To:      Wastewise: Charity Thrift Store <wastewise@wastewise.ca>
+  Subject: A better website for Wastewise: Charity Thrift Store — $200, no monthly fees
+  Cat:     shop:second_hand
+
+[91_Watan_Kabob.txt]
+  To:      Watan Kabob <info@watankabob.com>
+  Subject: A proper website for Watan Kabob — $200 flat
+  Cat:     amenity:restaurant

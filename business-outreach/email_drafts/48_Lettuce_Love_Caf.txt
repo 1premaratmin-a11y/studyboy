@@ -1,0 +1,34 @@
+To: Lettuce Love Café <ieat@lettucelovecafe.com>
+From: Prem <you@example.com>
+Subject: A proper website for Lettuce Love Café — $200 flat
+
+Hi Lettuce Love Café team,
+
+I was looking for great local spots in Burlington and came across Lettuce Love Café. Your food looks fantastic — but honestly, your online presence isn’t doing you justice.
+
+Most restaurants your size are either paying $50+/month for a clunky template builder, or they got quoted $2,000+ by an agency for a site that still looks like it’s from 2012.
+
+I build modern, fast, mobile-first websites for small businesses for $200 — one time, no monthly fees. That includes:
+  • A clean, mobile-friendly design that actually looks good
+  • Your menu, hours, location & map, and contact info
+  • Photos of your food / space
+  • Google Maps integration so people find you
+  • Fast loading (most template sites are painfully slow on phones)
+
+No subscriptions, no lock-in. You own the site.
+
+If you’re curious, I’d love to show you a quick mockup of what Lettuce Love Café could look like. No pressure, no obligation — just reply here and I’ll send something over.
+
+Cheers,
+Prem
+
+
+Portfolio: https://yourportfolio.com
+
+---
+Business: Lettuce Love Café
+Category: amenity:restaurant
+Email: ieat@lettucelovecafe.com
+Phone: +1-905-637-2700
+
+OSM: https://www.openstreetmap.org/node/6565132173

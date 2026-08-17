@@ -1,0 +1,32 @@
+To: La Creme de la Creme Creamery <info@lacremedelacremecreamery.com>
+From: Prem <you@example.com>
+Subject: A better website for La Creme de la Creme Creamery — $200, no monthly fees
+
+Hi La Creme de la Creme Creamery,
+
+I came across La Creme de la Creme Creamery while looking at ice cream businesses in Burlington. You’ve clearly put work into what you do — but a lot of small businesses undersell themselves online.
+
+I build modern, mobile-friendly websites for small businesses for $200 — flat, one-time, no subscriptions:
+  • Clean design that reflects your brand
+  • Whatever info matters most to your customers
+  • Contact form + Google Maps
+  • Fast on phones
+  • You own it — no lock-in
+
+Agencies charge $2,000+. Template builders cost a monthly fee forever and still look generic. I do it for $200 once and you’re done.
+
+If you’d like to see a quick mockup of what La Creme de la Creme Creamery could look like, just reply here. No obligation at all.
+
+Cheers,
+Prem
+
+
+Portfolio: https://yourportfolio.com
+
+---
+Business: La Creme de la Creme Creamery
+Category: amenity:ice_cream
+Email: info@lacremedelacremecreamery.com
+
+
+OSM: https://www.openstreetmap.org/node/12626051853

@@ -1,0 +1,34 @@
+To: Shawarma Alley <shawarmaally@gmail.com>
+From: Prem <you@example.com>
+Subject: A proper website for Shawarma Alley — $200 flat
+
+Hi Shawarma Alley team,
+
+I was looking for great local spots in Halton and came across Shawarma Alley. Your food looks fantastic — but honestly, your online presence isn’t doing you justice.
+
+Most restaurants your size are either paying $50+/month for a clunky template builder, or they got quoted $2,000+ by an agency for a site that still looks like it’s from 2012.
+
+I build modern, fast, mobile-first websites for small businesses for $200 — one time, no monthly fees. That includes:
+  • A clean, mobile-friendly design that actually looks good
+  • Your menu, hours, location & map, and contact info
+  • Photos of your food / space
+  • Google Maps integration so people find you
+  • Fast loading (most template sites are painfully slow on phones)
+
+No subscriptions, no lock-in. You own the site.
+
+If you’re curious, I’d love to show you a quick mockup of what Shawarma Alley could look like. No pressure, no obligation — just reply here and I’ll send something over.
+
+Cheers,
+Prem
+
+
+Portfolio: https://yourportfolio.com
+
+---
+Business: Shawarma Alley
+Category: amenity:fast_food
+Email: shawarmaally@gmail.com
+Phone: +1-519-763-3198
+
+OSM: https://www.openstreetmap.org/node/2206877075

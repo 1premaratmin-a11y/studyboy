@@ -1,0 +1,32 @@
+To: Clearview Dental <dental@clearviewmilton.ca>
+From: Prem <you@example.com>
+Subject: New patients start online — Clearview Dental website ($200)
+
+Hi Clearview Dental,
+
+When someone in Milton searches for a dentist, the practice with the clearest, most trustworthy website usually wins. I took a quick look and Clearview Dental’s could be working harder for you.
+
+I build modern websites for small practices for $200 — flat, one-time, no monthly fees. For a dental office that means:
+  • A clean site that makes new patients feel confident booking
+  • Online appointment request form
+  • Services, team bios, and office photos
+  • Google Maps + directions
+  • Fast on phones (where most people search)
+
+Agencies charge $2,000–$5,000 for this. Template builders cost $40–$80/month forever and still look generic. I do it for $200 once — and you own it.
+
+Want me to send a quick mockup of what Clearview Dental could look like? Just reply and I’ll put one together. No commitment.
+
+Best,
+Prem
+
+
+Portfolio: https://yourportfolio.com
+
+---
+Business: Clearview Dental
+Category: amenity:dentist
+Email: dental@clearviewmilton.ca
+
+
+OSM: https://www.openstreetmap.org/node/11772948085

@@ -1,0 +1,32 @@
+To: Desired Smiles Dental <info@desiredsmiles.com>
+From: Prem <you@example.com>
+Subject: New patients start online — Desired Smiles Dental website ($200)
+
+Hi Desired Smiles Dental,
+
+When someone in Burlington searches for a dentist, the practice with the clearest, most trustworthy website usually wins. I took a quick look and Desired Smiles Dental’s could be working harder for you.
+
+I build modern websites for small practices for $200 — flat, one-time, no monthly fees. For a dental office that means:
+  • A clean site that makes new patients feel confident booking
+  • Online appointment request form
+  • Services, team bios, and office photos
+  • Google Maps + directions
+  • Fast on phones (where most people search)
+
+Agencies charge $2,000–$5,000 for this. Template builders cost $40–$80/month forever and still look generic. I do it for $200 once — and you own it.
+
+Want me to send a quick mockup of what Desired Smiles Dental could look like? Just reply and I’ll put one together. No commitment.
+
+Best,
+Prem
+
+
+Portfolio: https://yourportfolio.com
+
+---
+Business: Desired Smiles Dental
+Category: amenity:dentist
+Email: info@desiredsmiles.com
+Phone: +1 905 637 5463
+
+OSM: https://www.openstreetmap.org/node/4185688496
