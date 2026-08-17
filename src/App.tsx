@@ -32,7 +32,6 @@ export default function App() {
   useEffect(() => { seedIfEmpty(); seedDemoNotes(); }, []);
   useEffect(() => { let c = false; autorunOllama().then((s) => { if (!c) setOllamaStatus(s); }); return () => { c = true; }; }, []);
   useEffect(() => { localStorage.setItem("studyboy.llmMode", llmMode); }, [llmMode]);
-
   async function resetData() { if (!window.confirm("Reset all data? This wipes all local StudyBoy data and reseeds. Cannot undo.")) return; await db.delete(); window.location.reload(); }
 
   useEffect(() => {

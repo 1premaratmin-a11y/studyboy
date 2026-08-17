@@ -18,18 +18,20 @@ export function CommandPalette({ open, onClose, setView }: { open: boolean; onCl
   const results = CMDS.filter((c) => c.label.toLowerCase().includes(q.toLowerCase()));
   return (
     <div className="fixed inset-0 z-[800] flex justify-center pt-[80px]" style={{ background: "rgba(0,0,0,0.4)" }} onClick={onClose}>
-      <div className="w-[480px] max-w-[90vw] rounded-lg border border-white/10 overflow-hidden"
-        style={{ background: "#16130e", boxShadow: "0 8px 24px rgba(0,0,0,0.5)" }} onClick={(e) => e.stopPropagation()}>
+      <div className="w-[480px] max-w-[90vw] rounded-lg border overflow-hidden"
+        style={{ background: "#1a1612", borderColor: "rgba(245,158,11,0.10)", boxShadow: "0 4px 12px rgba(0,0,0,0.4)" }}
+        onClick={(e) => e.stopPropagation()}>
         <input autoFocus value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search commands..."
-          className="w-full bg-transparent border-b border-white/8 px-4 py-3 text-sm outline-none text-zinc-200 placeholder:text-zinc-600" />
+          className="w-full bg-transparent border-b px-4 py-3 text-sm outline-none"
+          style={{ borderColor: "rgba(245,158,11,0.08)", color: "#f0ebe3" }} />
         <div className="flex flex-col py-1">
           {results.map((c) => (
             <button key={c.id} onClick={() => { if (c.view) setView(c.view); onClose(); }}
               className="text-left px-4 py-2 hover:bg-white/5 text-sm flex justify-between items-center">
-              <span className="text-zinc-200">{c.label}</span><span className="text-[10px] text-zinc-600 uppercase">{c.group}</span>
+              <span style={{ color: "#f0ebe3" }}>{c.label}</span><span className="text-[10px] uppercase" style={{ color: "#8a7e6e" }}>{c.group}</span>
             </button>
           ))}
-          {results.length === 0 && <div className="px-4 py-3 text-sm text-zinc-600">No matching commands.</div>}
+          {results.length === 0 && <div className="px-4 py-3 text-sm" style={{ color: "#8a7e6e" }}>No matching commands.</div>}
         </div>
       </div>
     </div>

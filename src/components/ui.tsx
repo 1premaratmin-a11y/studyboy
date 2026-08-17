@@ -27,7 +27,7 @@ export function Ptag({ children, tone = "default" }: { children: ReactNode; tone
 export function PixelDivider() { return <hr className="pixel-divider" />; }
 
 export function HudCell({ icon, value, title }: { icon: ReactNode; value: ReactNode; title: string; }) {
-  return <div title={title} className="flex items-center gap-1.5 bg-surface2 border border-border px-2 py-0.5 rounded text-xs text-primary"><span className="text-accent">{icon}</span><span className="font-medium">{value}</span></div>;
+  return <div title={title} className="flex items-center gap-1.5 bg-surface2 border border-border px-2 py-0.5 rounded text-xs text-primary"><span className="text-accent">{icon}</span><span className="font-medium tnum">{value}</span></div>;
 }
 
 export function Donut({ pct, size = 56, color = "var(--accent)", track = "var(--surface-3)" }: { pct: number; size?: number; color?: string; track?: string; }) {
@@ -52,7 +52,7 @@ export function FocusScreen({ time, session, pipsOn, pipsCur, label, armed, onSt
 }) {
   return <div className="card p-4 h-full flex flex-col">
     <div className="flex items-center justify-between text-xs text-muted mb-2"><span>{session}</span><span>Pomodoro</span></div>
-    <div className="font-mono text-4xl text-primary text-center my-2 tracking-wide">{time}</div>
+    <div className="font-mono text-4xl text-primary text-center my-2 tracking-wide tnum">{time}</div>
     <div className="flex gap-1.5 justify-center my-2">{[0,1,2,3].map((i) => <span key={i} className={`w-1.5 h-1.5 rounded-full ${i < pipsOn ? "bg-accent" : i === pipsCur ? "bg-warning" : "bg-surface3"}`} />)}</div>
     <div className="flex gap-2 justify-center mt-2"><PixelButton armed={armed} onClick={onStart}>Start</PixelButton><PixelButton onClick={onPause}>Pause</PixelButton></div>
     <div className="text-center text-sm text-muted mt-2">{label}</div>
@@ -62,9 +62,9 @@ export function FocusScreen({ time, session, pipsOn, pipsCur, label, armed, onSt
 
 export function Toast({ title, body, onClose, style }: { title: string; body: string; onClose: () => void; style?: CSSProperties; }) {
   return <div role="status" aria-live="polite" className="fixed top-16 right-4 z-[500] max-w-xs rounded-lg flex gap-2 items-start p-3"
-    style={{ background: "#16130e", border: "1px solid rgba(245,158,11,0.25)", boxShadow: "0 4px 12px rgba(0,0,0,0.4)", ...style }}>
-    <div className="w-4 h-4 rounded-full bg-accent flex items-center justify-center text-[10px] font-bold flex-shrink-0" style={{ color: "#0d0b08" }}>!</div>
-    <div className="text-sm leading-snug"><b className="text-accent block text-xs font-semibold mb-0.5">{title}</b><span className="text-zinc-300">{body}</span></div>
+    style={{ background: "#1a1612", border: "1px solid rgba(245,158,11,0.16)", ...style }}>
+    <div className="w-4 h-4 rounded-full bg-accent flex items-center justify-center text-[10px] font-bold flex-shrink-0" style={{ color: "#100d0a" }}>!</div>
+    <div className="text-sm leading-snug"><b className="text-accent block text-xs font-semibold mb-0.5">{title}</b><span style={{ color: "#c4b8a8" }}>{body}</span></div>
     <button onClick={onClose} aria-label="Dismiss" className="text-muted hover:text-primary text-sm bg-transparent border-0 p-0 ml-1">×</button>
   </div>;
 }

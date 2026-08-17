@@ -1,13 +1,11 @@
 import { GameBoyMark } from "./GameBoyMark";
 import type { AutoRunStatus } from "../lib/ollamaAutoRun";
-
 function OllamaBadge({ status }: { status: AutoRunStatus }) {
   if (status.kind === "idle") return null;
   const cls = status.kind === "online" ? "online" : status.kind === "warming" ? "warming" : status.kind === "checking" ? "checking" : status.kind === "offline" ? "offline" : "unavailable";
   const label = status.kind === "online" ? status.model : status.kind === "warming" ? `loading ${status.model}` : status.kind === "checking" ? "checking" : status.kind === "offline" ? "offline" : "desktop-only";
   return <div className={`ollama-badge ${cls}`} title={status.kind === "online" || status.kind === "offline" ? status.message : label}><span className="dot" /><span>{label}</span></div>;
 }
-
 export function TopBar({ onPalette, ollamaStatus, onToggleSidebar }: { onPalette: () => void; ollamaStatus?: AutoRunStatus; onToggleSidebar: () => void; }) {
   return (
     <div className="chat-topbar">
