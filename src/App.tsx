@@ -17,10 +17,9 @@ import { Calendar } from "./pages/Calendar";
 import { Progress } from "./pages/Progress";
 import { Toast } from "./components/ui";
 import { autorunOllama, readLastStatus, type AutoRunStatus } from "./lib/ollamaAutoRun";
+import Aurora from "./react-bits/Backgrounds/Aurora";
 
 type LlmMode = "cloud" | "local";
-
-
 
 export default function App() {
   const [view, setView] = useState<ViewKey>("notes");
@@ -33,21 +32,15 @@ export default function App() {
     () => (localStorage.getItem("studyboy.llmMode") as LlmMode) || "cloud",
   );
 
-  useEffect(() => {
-    seedIfEmpty();
-    seedDemoNotes();
-  }, []);
+  useEffect(() => { seedIfEmpty(); seedDemoNotes(); }, []);
 
-  // Autorun Ollama + ensure llama3.2 is loaded on boot (Tauri only; no-op in browser).
   useEffect(() => {
     let cancelled = false;
     autorunOllama().then((s) => { if (!cancelled) setOllamaStatus(s); });
     return () => { cancelled = true; };
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem("studyboy.llmMode", llmMode);
-  }, [llmMode]);
+  useEffect(() => { localStorage.setItem("studyboy.llmMode", llmMode); }, [llmMode]);
 
   async function resetData() {
     if (!window.confirm("Reset all data? This wipes all local StudyBoy data and reseeds. Cannot undo.")) return;
@@ -55,46 +48,39 @@ export default function App() {
     window.location.reload();
   }
 
-  function handleNewChat() {
-    setView("notes");
-  }
+  function handleNewChat() { setView("notes"); }
 
-  // global hotkey: Ctrl+K palette
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
-        e.preventDefault();
-        setPalette((p) => !p);
-      }
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); setPalette((p) => !p); }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  useEffect(() => {
-    document.body.classList.toggle("no-scan", !scan);
-  }, [scan]);
+  useEffect(() => { document.body.classList.toggle("no-scan", !scan); }, [scan]);
 
   return (
     <>
       <BootSplash />
       {toast && (
-        <Toast
-          title="Sync Lost"
-          body="Signal lost to Canvas. Offline mode active — progress saved locally."
-          onClose={() => setToast(false)}
-        />
+        <Toast title="Sync Lost" body="Signal lost to Canvas. Offline mode active — progress saved locally." onClose={() => setToast(false)} />
       )}
       <CommandPalette open={palette} onClose={() => setPalette(false)} setView={setView} />
 
       <div className={`app-shell ${sidebarCollapsed ? "collapsed" : ""}`}>
-        <Sidebar
-          view={view}
-          setView={setView}
-
-          onNewChat={handleNewChat}
-        />
+        <Sidebar view={view} setView={setView} onNewChat={handleNewChat} />
         <div className="chat-main">
+          {/* Animated aurora background — subtle, behind everything */}
+          <div className="aurora-bg">
+            <Aurora
+              colorStops={["#6366f1", "#8b5cf6", "#6366f1"]}
+              amplitude={0.8}
+              blend={0.6}
+              speed={0.4}
+            />
+          </div>
+
           <TopBar
             onPalette={() => setPalette(true)}
             ollamaStatus={ollamaStatus}
@@ -102,29 +88,17 @@ export default function App() {
           />
           <div className="chat-scroll scroll-pretty">
             <div className="chat-column">
-              {view === "dashboard" ? (
-                <Dashboard />
-              ) : view === "todos" ? (
-                <Todos />
-              ) : view === "notes" ? (
-                <AINotes />
-              ) : view === "notebook" ? (
-                <Notebook />
-              ) : view === "flashcards" ? (
-                <Flashcards />
-              ) : view === "courses" ? (
-                <Courses />
-              ) : view === "focus" ? (
-                <Focus />
-              ) : view === "calendar" ? (
-                <Calendar />
-              ) : view === "progress" ? (
-                <Progress />
-              ) : view === "settings" ? (
-                <Settings scan={scan} setScan={setScan} llmMode={llmMode} setLlmMode={setLlmMode} onResetData={resetData} />
-              ) : (
-                <ComingSoon view={view} />
-              )}
+              {view === "dashboard" ? <Dashboard />
+              : view === "todos" ? <Todos />
+              : view === "notes" ? <AINotes />
+              : view === "notebook" ? <Notebook />
+              : view === "flashcards" ? <Flashcards />
+              : view === "courses" ? <Courses />
+              : view === "focus" ? <Focus />
+              : view === "calendar" ? <Calendar />
+              : view === "progress" ? <Progress />
+              : view === "settings" ? <Settings scan={scan} setScan={setScan} llmMode={llmMode} setLlmMode={setLlmMode} onResetData={resetData} />
+              : <ComingSoon view={view} />}
             </div>
           </div>
         </div>

@@ -1,16 +1,8 @@
 import { type ReactNode } from "react";
 
 export type ViewKey =
- | "dashboard"
- | "courses"
- | "focus"
- | "todos"
- | "notes"
- | "notebook"
- | "flashcards"
- | "calendar"
- | "progress"
- | "settings";
+ | "dashboard" | "courses" | "focus" | "todos" | "notes"
+ | "notebook" | "flashcards" | "calendar" | "progress" | "settings";
 
 const NAV: { key: ViewKey; label: string; icon: ReactNode; badge?: string }[] = [
  { key: "notes", label: "Study Chat", icon: <IconChat /> },
@@ -25,15 +17,9 @@ const NAV: { key: ViewKey; label: string; icon: ReactNode; badge?: string }[] = 
 ];
 
 export function Sidebar({
- view,
- setView,
-
- onNewChat,
+ view, setView, onNewChat,
 }: {
- view: ViewKey;
- setView: (v: ViewKey) => void;
-
- onNewChat: () => void;
+ view: ViewKey; setView: (v: ViewKey) => void; onNewChat: () => void;
 }) {
  return (
  <nav className="studyboy-sidebar scroll-pretty">
@@ -45,13 +31,8 @@ export function Sidebar({
  {NAV.map((n) => {
  const active = view === n.key;
  return (
- <button
- key={n.key}
- onClick={() => setView(n.key)}
- aria-current={active ? "page" : undefined}
- className={`sidebar-item ${active ? "active" : ""}`}
- title={n.label}
- >
+ <button key={n.key} onClick={() => setView(n.key)} aria-current={active ? "page" : undefined}
+ className={`sidebar-item ${active ? "active" : ""}`} title={n.label}>
  {n.icon}
  <span>{n.label}</span>
  {n.badge && <span className="sidebar-badge">{n.badge}</span>}
@@ -59,12 +40,8 @@ export function Sidebar({
  );
  })}
  <div className="sidebar-spacer" />
- <button
- onClick={() => setView("settings")}
- aria-current={view === "settings" ? "page" : undefined}
- className={`sidebar-item ${view === "settings" ? "active" : ""}`}
- title="Settings"
- >
+ <button onClick={() => setView("settings")} aria-current={view === "settings" ? "page" : undefined}
+ className={`sidebar-item ${view === "settings" ? "active" : ""}`} title="Settings">
  <IconSettings />
  <span>Settings</span>
  </button>
@@ -72,13 +49,8 @@ export function Sidebar({
  );
 }
 
-// ── Icons ──
 function Svg({ children }: { children: ReactNode }) {
- return (
- <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
- {children}
- </svg>
- );
+ return <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">{children}</svg>;
 }
 function IconPlus() { return <Svg><path d="M12 5v14M5 12h14" /></Svg>; }
 function IconChat() { return <Svg><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" /></Svg>; }
