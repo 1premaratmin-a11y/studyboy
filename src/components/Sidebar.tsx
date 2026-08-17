@@ -1,57 +1,36 @@
 import { type ReactNode } from "react";
-
-export type ViewKey =
- | "dashboard" | "courses" | "focus" | "todos" | "notes"
- | "notebook" | "flashcards" | "calendar" | "progress" | "settings";
-
+export type ViewKey = "dashboard" | "courses" | "focus" | "todos" | "notes" | "notebook" | "flashcards" | "calendar" | "progress" | "settings";
 const NAV: { key: ViewKey; label: string; icon: ReactNode; badge?: string }[] = [
- { key: "notes", label: "Study Chat", icon: <IconChat /> },
- { key: "notebook", label: "Notebook", icon: <IconNotebook /> },
- { key: "flashcards", label: "Flashcards", icon: <IconCards />, badge: "12" },
- { key: "todos", label: "Todos", icon: <IconTodos />, badge: "5" },
- { key: "focus", label: "Focus", icon: <IconFocus /> },
- { key: "calendar", label: "Calendar", icon: <IconCalendar /> },
- { key: "courses", label: "Courses", icon: <IconCourses /> },
- { key: "progress", label: "Progress", icon: <IconProgress /> },
- { key: "dashboard", label: "Dashboard", icon: <IconDashboard /> },
+  { key: "notes", label: "Study Chat", icon: <IconChat /> },
+  { key: "notebook", label: "Notebook", icon: <IconNotebook /> },
+  { key: "flashcards", label: "Flashcards", icon: <IconCards />, badge: "12" },
+  { key: "todos", label: "Todos", icon: <IconTodos />, badge: "5" },
+  { key: "focus", label: "Focus", icon: <IconFocus /> },
+  { key: "calendar", label: "Calendar", icon: <IconCalendar /> },
+  { key: "courses", label: "Courses", icon: <IconCourses /> },
+  { key: "progress", label: "Progress", icon: <IconProgress /> },
+  { key: "dashboard", label: "Dashboard", icon: <IconDashboard /> },
 ];
-
-export function Sidebar({
- view, setView, onNewChat,
-}: {
- view: ViewKey; setView: (v: ViewKey) => void; onNewChat: () => void;
-}) {
- return (
- <nav className="studyboy-sidebar scroll-pretty">
- <button className="sidebar-new-chat" onClick={onNewChat} title="New study chat">
- <IconPlus />
- <span>New Chat</span>
- </button>
- <div className="sidebar-heading">Study</div>
- {NAV.map((n) => {
- const active = view === n.key;
- return (
- <button key={n.key} onClick={() => setView(n.key)} aria-current={active ? "page" : undefined}
- className={`sidebar-item ${active ? "active" : ""}`} title={n.label}>
- {n.icon}
- <span>{n.label}</span>
- {n.badge && <span className="sidebar-badge">{n.badge}</span>}
- </button>
- );
- })}
- <div className="sidebar-spacer" />
- <button onClick={() => setView("settings")} aria-current={view === "settings" ? "page" : undefined}
- className={`sidebar-item ${view === "settings" ? "active" : ""}`} title="Settings">
- <IconSettings />
- <span>Settings</span>
- </button>
- </nav>
- );
+export function Sidebar({ view, setView, onNewChat }: { view: ViewKey; setView: (v: ViewKey) => void; onNewChat: () => void; }) {
+  return (
+    <nav className="studyboy-sidebar scroll-pretty">
+      <button className="sidebar-new-chat" onClick={onNewChat}><IconPlus /><span>New Chat</span></button>
+      <div className="sidebar-heading">Study</div>
+      {NAV.map((n) => (
+        <button key={n.key} onClick={() => setView(n.key)} aria-current={view === n.key ? "page" : undefined}
+          className={`sidebar-item ${view === n.key ? "active" : ""}`} title={n.label}>
+          {n.icon}<span>{n.label}</span>{n.badge && <span className="sidebar-badge">{n.badge}</span>}
+        </button>
+      ))}
+      <div className="sidebar-spacer" />
+      <button onClick={() => setView("settings")} aria-current={view === "settings" ? "page" : undefined}
+        className={`sidebar-item ${view === "settings" ? "active" : ""}`} title="Settings">
+        <IconSettings /><span>Settings</span>
+      </button>
+    </nav>
+  );
 }
-
-function Svg({ children }: { children: ReactNode }) {
- return <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">{children}</svg>;
-}
+function Svg({ children }: { children: ReactNode }) { return <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">{children}</svg>; }
 function IconPlus() { return <Svg><path d="M12 5v14M5 12h14" /></Svg>; }
 function IconChat() { return <Svg><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" /></Svg>; }
 function IconDashboard() { return <Svg><rect x="3" y="3" width="7" height="9" rx="1" /><rect x="14" y="3" width="7" height="5" rx="1" /><rect x="14" y="12" width="7" height="9" rx="1" /><rect x="3" y="16" width="7" height="5" rx="1" /></Svg>; }

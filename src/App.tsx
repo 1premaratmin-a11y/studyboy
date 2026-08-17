@@ -17,7 +17,6 @@ import { Calendar } from "./pages/Calendar";
 import { Progress } from "./pages/Progress";
 import { Toast } from "./components/ui";
 import { autorunOllama, readLastStatus, type AutoRunStatus } from "./lib/ollamaAutoRun";
-import Aurora from "./react-bits/Backgrounds/Aurora";
 
 type LlmMode = "cloud" | "local";
 
@@ -26,66 +25,31 @@ export default function App() {
   const [palette, setPalette] = useState(false);
   const [scan, setScan] = useState(true);
   const [toast, setToast] = useState(true);
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
   const [ollamaStatus, setOllamaStatus] = useState<AutoRunStatus>(() => readLastStatus());
-  const [llmMode, setLlmMode] = useState<LlmMode>(
-    () => (localStorage.getItem("studyboy.llmMode") as LlmMode) || "cloud",
-  );
+  const [llmMode, setLlmMode] = useState<LlmMode>(() => (localStorage.getItem("studyboy.llmMode") as LlmMode) || "cloud");
 
   useEffect(() => { seedIfEmpty(); seedDemoNotes(); }, []);
-
-  useEffect(() => {
-    let cancelled = false;
-    autorunOllama().then((s) => { if (!cancelled) setOllamaStatus(s); });
-    return () => { cancelled = true; };
-  }, []);
-
+  useEffect(() => { let c = false; autorunOllama().then((s) => { if (!c) setOllamaStatus(s); }); return () => { c = true; }; }, []);
   useEffect(() => { localStorage.setItem("studyboy.llmMode", llmMode); }, [llmMode]);
 
-  async function resetData() {
-    if (!window.confirm("Reset all data? This wipes all local StudyBoy data and reseeds. Cannot undo.")) return;
-    await db.delete();
-    window.location.reload();
-  }
-
-  function handleNewChat() { setView("notes"); }
+  async function resetData() { if (!window.confirm("Reset all data? This wipes all local StudyBoy data and reseeds. Cannot undo.")) return; await db.delete(); window.location.reload(); }
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); setPalette((p) => !p); }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    const onKey = (e: KeyboardEvent) => { if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); setPalette((p) => !p); } };
+    window.addEventListener("keydown", onKey); return () => window.removeEventListener("keydown", onKey);
   }, []);
-
   useEffect(() => { document.body.classList.toggle("no-scan", !scan); }, [scan]);
 
   return (
     <>
       <BootSplash />
-      {toast && (
-        <Toast title="Sync Lost" body="Signal lost to Canvas. Offline mode active — progress saved locally." onClose={() => setToast(false)} />
-      )}
+      {toast && <Toast title="Sync Lost" body="Signal lost to Canvas. Offline mode active." onClose={() => setToast(false)} />}
       <CommandPalette open={palette} onClose={() => setPalette(false)} setView={setView} />
-
-      <div className={`app-shell ${sidebarCollapsed ? "collapsed" : ""}`}>
-        <Sidebar view={view} setView={setView} onNewChat={handleNewChat} />
+      <div className={`app-shell ${collapsed ? "collapsed" : ""}`}>
+        <Sidebar view={view} setView={setView} onNewChat={() => setView("notes")} />
         <div className="chat-main">
-          {/* Animated aurora background — subtle, behind everything */}
-          <div className="aurora-bg">
-            <Aurora
-              colorStops={["#6366f1", "#8b5cf6", "#6366f1"]}
-              amplitude={0.8}
-              blend={0.6}
-              speed={0.4}
-            />
-          </div>
-
-          <TopBar
-            onPalette={() => setPalette(true)}
-            ollamaStatus={ollamaStatus}
-            onToggleSidebar={() => setSidebarCollapsed((c) => !c)}
-          />
+          <TopBar onPalette={() => setPalette(true)} ollamaStatus={ollamaStatus} onToggleSidebar={() => setCollapsed((c) => !c)} />
           <div className="chat-scroll scroll-pretty">
             <div className="chat-column">
               {view === "dashboard" ? <Dashboard />
