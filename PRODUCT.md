@@ -1,4 +1,4 @@
-# Product
+# Product: Margin
 
 <!-- impeccable:product-schema 1 -->
 
@@ -27,7 +27,7 @@ Local-first: all data in IndexedDB, all LLM inference via Ollama on localhost. T
 - Must work offline (no cloud dependency required)
 - Must run at 1280x820 resolution without scrolling horizontally
 - Tauri desktop app (not a website) — window chrome, native menus
-- Warm amber accent (#f59e0b), dark mode, balanced density
+- Warm amber accent, daylight light scheme, balanced density
 - Single-panel layout (content fills the main area edge-to-edge)
 - All features preserved: Study Chat (7 tabs), Flashcards, Focus, Calendar, Progress, Courses, Todos, Notebook, Settings, Canvas LMS
 

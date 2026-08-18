@@ -4,14 +4,14 @@
 
 ## Visual world
 
-Studyboy is an editorial study canvas inside a graphite desktop shell. The active conversation uses warm paper because it is the place for reading and thinking; supporting productivity modules retain dark, low-glare operating surfaces. Amber behaves like a teacher's mark: it identifies the active learning moment and is never ambient decoration.
+Margin is an editorial study canvas in a daylight paper shell. Warm ivory surfaces support long reading sessions; graphite is reserved for active navigation and decisive actions. Amber behaves like a teacher's mark: it identifies the active learning moment and is never ambient decoration.
 
 ## Color
 
 | Token | Value | Use |
 |---|---|---|
-| `--shell` | `#171714` | Navigation and desktop chrome |
-| `--shell-2` | `#20201c` | Dark secondary surfaces |
+| `--shell` | `#ebe8df` | Navigation rail |
+| `--shell-2` | `#e1ddd2` | Secondary chrome |
 | `--paper` | `#f4f1e9` | Conversation canvas |
 | `--paper-deep` | `#ebe7dc` | Conversation index and grouped controls |
 | `--ink` | `#20201d` | Primary paper text |
@@ -33,7 +33,7 @@ The desktop operates on a 12-column concept: 72px icon rail, 252px conversation 
 - Buttons and inputs use 9–16px corner radii according to scale; only compact status controls use pill geometry.
 - Student messages use a warm-gray speech surface. Studyboy responses live directly on the paper with an amber author mark.
 - The artifact dock contains Sources plus Notes, Quiz, Guide, Podcast, Match, and Map modes.
-- Legacy functional modules are contained on dark surfaces while they are progressively migrated into the new shell.
+- Today, Notebook, Flashcards, Focus, Calendar, Tasks, Courses, Progress, and Settings share the same daylight system and operate on existing local data.
 
 ## Motion and states
 

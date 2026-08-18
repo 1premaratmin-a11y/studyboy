@@ -1,6 +1,6 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "StudyBoy",
+  "productName": "Margin",
   "version": "0.1.0",
   "identifier": "com.studyboy.app",
   "build": {
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "StudyBoy — Study Companion",
+        "title": "Margin — Study Companion",
         "width": 1280,
         "height": 820,
         "minWidth": 900,
