@@ -479,7 +479,7 @@ export function AINotes() {
  : s,
  );
  await db.noteDocuments.update(doc.id, { sections, updatedAt: new Date().toISOString() });
- setToast(`↻ section ${idx + 1} regenerated`);
+ setToast(`Section ${idx + 1} regenerated`);
  } catch (e) {
  setGenError(`regen failed: ${e instanceof Error ? e.message : String(e)}`);
  } finally {
@@ -492,14 +492,14 @@ export function AINotes() {
  return (
  <main className="study-chat-workspace min-h-0 overflow-auto scroll-pretty grid grid-cols-12 gap-2.5 pr-0.5">
  {/* Conversation history */}
- <Panel title="STUDY CHATS"sub={`conversation history · ${sessions.length}`} span={4} ariaLabel="Study chat history">
+ <Panel title="Recent conversations"sub={`${sessions.length} local threads`} span={4} ariaLabel="Study chat history">
  <PixelButton variant="blue"armed onClick={newSession} className="w-full mb-2">
- + NEW CHAT
+ New conversation
  </PixelButton>
  <input
  value={search}
  onChange={(e) => setSearch(e.target.value)}
- placeholder="search sessions…"
+ placeholder="Search conversations"
  spellCheck={false}
  aria-label="Search sessions"
  className="w-full mb-2 bg-surface0 border-2 border-borderStrong3 px-2 py-1 font-mono text-[12px] outline-none focus:ring-2 focus:ring-accent"
@@ -556,14 +556,14 @@ export function AINotes() {
 
  {/* Detail */}
  <Panel
- title={sel ? `CHAT · ${sel.title.toUpperCase()}` :"STUDYBOY CHAT"}
- sub={sel ? `${sel.status} · ${sel.llmMode} · ask, explore, master` :"your always-on study partner"}
+ title={sel ? sel.title :"Ask Studyboy"}
+ sub={sel ? `${sel.status} · ${sel.llmMode} · grounded in your material` :"Your private, always-available study partner"}
  span={8}
  ariaLabel="StudyBoy chat workspace"
  >
  {!sel ? (
  <div className="border-2 border-dashed border-borderStrong1 bg-surface1 p-3 text-[16px] text-muted1">
- ◢ No session selected. Power on — start a new note session.
+ No conversation selected. Start a new study chat.
  </div>
  ) : (
  <div className="flex flex-col gap-3">
@@ -616,7 +616,7 @@ export function AINotes() {
  onChange={(e) => { void handleFiles(e.target.files); e.currentTarget.value =""; }}
  />
  <PixelButton onClick={() => fileRef.current?.click()} title="upload PDF / DOCX / TXT">
- {extracting ?"READING…":"⇪ UPLOAD FILE"}
+ {extracting ?"Reading…":"Upload file"}
  </PixelButton>
  {mic.supported && (
  <button
@@ -624,7 +624,7 @@ export function AINotes() {
  title="record live lecture (browser speech recognition)"
  className={`text-xs font-semibold px-2 py-1.5 btn btn-sm ${mic.listening ?"bg-danger text-white border-danger rec-pulse":"bg-surface22 text-muted border-borderStrong hover:bg-surface21 hover:text-surface0"}`}
  >
- {mic.listening ?"■ STOP REC":"● REC"}
+ {mic.listening ?"Stop recording":"Record"}
  </button>
  )}
  </div>
@@ -669,7 +669,7 @@ export function AINotes() {
  className="flex-1 min-w-[180px] bg-surface0 border-2 border-borderStrong3 px-2 py-1 font-mono text-[12px] outline-none focus:ring-2 focus:ring-accent"
  />
  <PixelButton variant="blue"armed={!ytBusy} onClick={loadYoutube}>
- {ytBusy ?"LOADING…":"▶ LOAD YT"}
+ {ytBusy ?"Loading…":"Load video"}
  </PixelButton>
  </div>
  {ytEmbed && (
@@ -724,12 +724,12 @@ export function AINotes() {
  <div className="flex flex-col gap-1.5">
  <div className="flex gap-2 items-center flex-wrap">
  <PixelButton variant="blue"armed={!generating} onClick={generate}>
- {generating ?"FORGING…":"⚡ GENERATE NOTES"}
+ {generating ?"Generating…":"Generate notes"}
  </PixelButton>
  {doc && (
  <>
  <PixelButton onClick={pushQcards} title="push Q-cards to the Flashcards deck">
- → PUSH Q-CARDS
+ Add to flashcards
  </PixelButton>
  <PixelButton onClick={copyMarkdown}>COPY MD</PixelButton>
  <PixelButton onClick={exportMarkdown}>EXPORT .MD</PixelButton>
@@ -743,10 +743,10 @@ export function AINotes() {
  </span>
  </span>
  </div>
- {pushedCount !== null && <div className="font-mono text-[11px] text-success">✓ {pushedCount} cards pushed to Flashcards deck</div>}
+ {pushedCount !== null && <div className="font-mono text-[11px] text-success">{pushedCount} cards added to Flashcards</div>}
  {genError && (
  <div role="alert"className="font-mono text-[11px] text-warning bg-surface1 border-2 border-warning/60 px-2 py-1 rounded-sm break-words">
- ⚠ {genError}
+ {genError}
  </div>
  )}
  </div>
@@ -921,7 +921,7 @@ function CornellDoc({ doc, regenIndex, onRegen }: { doc: NoteDocument; regenInde
  title="regenerate this section with the LLM"
  className="ml-auto text-[10px] font-semibold px-1.5 py-0.5 border-2 border-surface0/60 text-surface0 hover:bg-surface0 hover:text-muted3 transition-colors disabled:opacity-50 disabled:cursor-wait"
  >
- {regenIndex === i ?"…":"↻"}
+ {regenIndex === i ?"Working…":"Regenerate"}
  </button>
  </div>
  <div className="grid grid-cols-3 divide-x-2 divide-base03">
@@ -1115,7 +1115,7 @@ function QuizView({ cfg, doc, depth, language }: { cfg: AiConfig; doc: NoteDocum
  </div>
  <div className="flex items-center gap-2 flex-wrap">
  <PixelButton variant="blue"armed={!busy} onClick={make}>
- {busy ?"BUILDING…": quiz ?"↻ NEW QUIZ":"⚡ GENERATE QUIZ"}
+ {busy ?"Building…": quiz ?"New quiz":"Generate quiz"}
  </PixelButton>
  {quiz && !checked && (
  <PixelButton armed={answeredCount() > 0 && !grading} onClick={check}>
@@ -1268,7 +1268,7 @@ function GuideView({ cfg, doc, depth, language }: { cfg: AiConfig; doc: NoteDocu
  <div className="flex flex-col gap-3">
  <div className="flex items-center gap-2 flex-wrap">
  <PixelButton variant="blue"armed={!busy} onClick={make}>
- {busy ?"BUILDING…": guide ?"↻ REGEN GUIDE":"⚡ STUDY GUIDE"}
+ {busy ?"Building…": guide ?"Regenerate guide":"Create study guide"}
  </PixelButton>
  {guide && <PixelButton onClick={copyGuide}>COPY MD</PixelButton>}
  {err && <span className="font-mono text-[11px] text-warning break-words">⚠ {err}</span>}
@@ -1364,7 +1364,7 @@ function PodcastView({ cfg, doc, language }: { cfg: AiConfig; doc: NoteDocument;
  <div className="flex flex-col gap-3">
  <div className="flex items-center gap-2 flex-wrap">
  <PixelButton variant="blue"armed={!busy} onClick={make}>
- {busy ?"WRITING…": script ?"↻ REGEN":"🎙 Study Podcast"}
+ {busy ?"Writing…": script ?"Regenerate":"Create study podcast"}
  </PixelButton>
  <SegGroup
  label="LEN"
@@ -1437,7 +1437,7 @@ function ChatFirstView({
  return (
  <section className="rounded-xl border-2 border-borderStrong bg-surface0 p-4 sm:p-5 shadow-sm"aria-label="Start a study chat">
  <div className="flex items-start gap-3">
- <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-accent text-surface0 text-[18px]"aria-hidden="true">✦</div>
+ <span className="studyboy-chat-mark h-9 w-9 shrink-0"aria-hidden="true" />
  <div className="min-w-0">
  <div className="mb-1 text-[17px] font-semibold text-muted3">What do you want to learn?</div>
  <p className="text-[15px] leading-relaxed text-muted1">Ask for an explanation, a study guide, practice questions, or a set of flashcards. You can start from a prompt — uploads are optional.</p>
@@ -1464,7 +1464,7 @@ function ChatFirstView({
  <div className="flex flex-wrap items-center justify-between gap-2 border-t border-borderStrong/40 px-2 pt-2">
  <span className="text-[12px] text-muted1">{engine} · ⌘/Ctrl + Enter to send</span>
  <button type="submit"disabled={generating || !prompt.trim()} className="rounded-lg bg-accent px-4 py-2 text-[15px] font-semibold text-surface0 transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50">
- {generating ?"Generating…":"Generate notes →"}
+ {generating ?"Generating…":"Generate notes"}
  </button>
  </div>
  </div>
@@ -1523,7 +1523,7 @@ function ChatView({ cfg, doc, initialPrompt }: { cfg: AiConfig; doc: NoteDocumen
  <div className="flex flex-col gap-3 rounded-xl border border-borderStrong bg-surface0 p-3 sm:p-4">
  <div className="flex items-center justify-between gap-2">
  <div className="flex items-center gap-2 text-[15px] font-semibold text-muted3">
- <span className="grid h-7 w-7 place-items-center rounded-full bg-accent text-surface0"aria-hidden="true">✦</span>
+ <span className="studyboy-chat-mark"aria-hidden="true" />
  Study chat
  </div>
  <span className="font-mono text-[11px] text-muted1">grounded in your notes</span>

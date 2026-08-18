@@ -1,7 +1,7 @@
 import { type ReactNode } from "react";
 export type ViewKey = "dashboard" | "courses" | "focus" | "todos" | "notes" | "notebook" | "flashcards" | "calendar" | "progress" | "settings";
 const NAV: { key: ViewKey; label: string; icon: ReactNode; badge?: string }[] = [
-  { key: "notes", label: "Study Chat", icon: <IconChat /> },
+  { key: "notes", label: "Ask Studyboy", icon: <IconChat /> },
   { key: "notebook", label: "Notebook", icon: <IconNotebook /> },
   { key: "flashcards", label: "Flashcards", icon: <IconCards />, badge: "12" },
   { key: "todos", label: "Todos", icon: <IconTodos />, badge: "5" },
@@ -14,9 +14,17 @@ const NAV: { key: ViewKey; label: string; icon: ReactNode; badge?: string }[] = 
 export function Sidebar({ view, setView, onNewChat }: { view: ViewKey; setView: (v: ViewKey) => void; onNewChat: () => void; }) {
   return (
     <nav className="studyboy-sidebar scroll-pretty">
-      <button className="sidebar-new-chat" onClick={onNewChat}><IconPlus /><span>New Chat</span></button>
-      <div className="sidebar-heading">Study</div>
-      {NAV.map((n) => (
+      <div className="sidebar-brand"><span className="brand-orbit" aria-hidden="true" /><span>studyboy</span></div>
+      <button className="sidebar-new-chat" onClick={onNewChat}><IconPlus /><span>Start a study chat</span><kbd>N</kbd></button>
+      <div className="sidebar-heading">Workspace</div>
+      {NAV.slice(0, 4).map((n) => (
+        <button key={n.key} onClick={() => setView(n.key)} aria-current={view === n.key ? "page" : undefined}
+          className={`sidebar-item ${view === n.key ? "active" : ""}`} title={n.label}>
+          {n.icon}<span>{n.label}</span>{n.badge && <span className="sidebar-badge">{n.badge}</span>}
+        </button>
+      ))}
+      <div className="sidebar-heading sidebar-heading-secondary">Organize</div>
+      {NAV.slice(4).map((n) => (
         <button key={n.key} onClick={() => setView(n.key)} aria-current={view === n.key ? "page" : undefined}
           className={`sidebar-item ${view === n.key ? "active" : ""}`} title={n.label}>
           {n.icon}<span>{n.label}</span>{n.badge && <span className="sidebar-badge">{n.badge}</span>}

@@ -14,12 +14,14 @@ export function TopBar({ onPalette, ollamaStatus, onToggleSidebar }: { onPalette
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M3 12h18M3 6h18M3 18h18" /></svg>
         </button>
         <GameBoyMark size={18} />
-        <span className="chat-topbar-title">StudyBoy</span>
+        <span className="chat-topbar-title">Studyboy</span>
+        <span className="topbar-context">Your private study space</span>
       </div>
       <div className="chat-topbar-right">
         {ollamaStatus && <OllamaBadge status={ollamaStatus} />}
-        <button onClick={onPalette} className="btn btn-ghost btn-sm" title="Search (Ctrl+K)">
+        <button onClick={onPalette} className="command-trigger" title="Search (Ctrl+K)">
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" /></svg>
+          <span>Search</span><kbd>Ctrl K</kbd>
         </button>
       </div>
     </div>
